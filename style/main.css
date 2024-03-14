@@ -66,6 +66,8 @@ section {
   align-items: center;
   gap: 30px;
   padding-top: 125px;
+  position: sticky;
+  top: 0;
 }
 .side-bar a {
   color: #fff;
@@ -302,6 +304,7 @@ section > main .exchanges-info .main-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 30px;
 }
 section > main .exchanges-info .main-row > div {
   display: flex;
@@ -356,4 +359,49 @@ section > main .exchanges-info .row span:last-child {
 }
 section > main .exchanges-info > .row.six span:last-child {
   color: #f92818;
+}
+@media (max-width: 1199px) {
+  section > main {
+    padding: 100px 50px 20px 100px;
+  }
+  section > main .exchange .buy-sell {
+    padding: 0px;
+  }
+  section > main .exchanges-info {
+    padding: 0;
+  }
+}
+@media (max-width: 991px) {
+  section > main {
+    padding: 80px 30px 50px;
+    gap: 30px;
+  }
+  section > main .exchange {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 840px) {
+  section > main {
+    flex-direction: column;
+    padding: 80px 15px 50px;
+  }
+  header {
+    padding: 10px;
+    gap: 10px;
+  }
+  header main .wallet {
+    display: none;
+  }
+  header main .profile a:first-child {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  section > main .exchange .buy-sell > a {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+  section > main .exchanges-info .main-row {
+    flex-direction: column;
+  }
 }
