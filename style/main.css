@@ -1,0 +1,359 @@
+:root {
+  --main-Color: #2259d9;
+  --main-Color-Hover: rgb(62 62 255);
+  --transparent-Color: #2259d931;
+  --text-Color: darkblue;
+  --main-border: 1px solid #ddd;
+}
+/* Start Global Rules */
+@font-face {
+  font-family: Cairo;
+  src: url(../Fonts/Cairo-VariableFont_slnt\,wght.ttf);
+}
+*, 
+::after, 
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  min-height: 100vh;
+  font-family: Cairo;
+  display: flex;
+}
+section {
+  flex: 1;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .container {
+ width: 355px
+}
+}
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+.container {
+ width: 750px;
+}
+}
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+.container {
+ width: 970px;
+}
+}
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+.container {
+ width: 1170px;
+}
+}
+/* End Global Rules */
+/* Start Side Bar */
+.side-bar {
+  width: 80px;
+  background: var(--main-Color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-top: 125px;
+}
+.side-bar a {
+  color: #fff;
+  font-size: 22px;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.side-bar a.active {
+  background-color: var(--main-Color-Hover);
+}
+.side-bar a:hover {
+  background-color: var(--main-Color-Hover);
+}
+/* Start Side Bar */
+/* Start Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: var(--main-border);
+}
+header > .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--main-Color);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+header > .logo span:first-child {
+  width: 25px;
+  height: 25px;
+  background: var(--main-Color);
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+} 
+header main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header main .wallet {
+  width: 250px;
+  height: 39px;
+  border: var(--main-border);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+header main .wallet span {
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+header main .wallet span:first-child {
+  padding-left: 12px;
+  border-radius: 20px 0px 0px 20px;
+  -webkit-border-radius: 20px 0px 0px 20px;
+  -moz-border-radius: 20px 0px 0px 20px;
+  -ms-border-radius: 20px 0px 0px 20px;
+  -o-border-radius: 20px 0px 0px 20px;
+  background-color: var(--transparent-Color);
+  color: var(--main-Color);
+}
+header main .wallet span:last-child {
+  padding-right: 12px;
+  color: var(--text-Color);
+}
+header main .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+header main .profile a:first-child {
+  color: #fff;
+  background: var(--main-Color);
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+header main .profile a {
+  font-size: 20px;
+  color: var(--text-Color);
+  text-decoration: none;
+}
+/* End Header */
+section > main {
+  position: relative;
+  height: calc(100% - 99px);
+  display: flex;
+  padding: 120px 70px 20px 100px;
+  gap: 80px;
+}
+section > main > h2 {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  text-transform: capitalize;
+  color: var(--text-Color);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+section > main > h2 span {
+  color: var(--main-Color);
+}
+section > main .exchange {
+  flex-basis: 40%;
+  background-color: #fff;
+}
+section > main .exchange .buy-sell {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+section > main .exchange .buy-sell a {
+  flex: 1;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+section > main .exchange .buy-sell .buy {
+  color: #fff;
+  background-color: var(--main-Color);
+  border: 1px solid var(--main-Color);
+}
+section > main .exchange .buy-sell .buy:hover {
+  background-color: var(--main-Color-Hover);
+}
+section > main .exchange .buy-sell .sell {
+  border: var(--main-border);
+  color: var(--main-Color);
+}
+section > main .exchange .buy-sell .sell:hover {
+  background-color: #f3f1f1;
+  color: var(--text-Color);
+}
+section > main .exchange .transaction-form {
+  text-transform: capitalize;
+}
+section > main .exchange .transaction-form h3 {
+  color: var(--text-Color);
+  margin: 20px 0;
+}
+section > main .exchange .transaction-form .row {
+  display: flex;
+  padding: 0 20px;
+  background: var(--transparent-Color);
+  font-size: 18px;
+  color: var(--text-Color);
+  height: 60px;
+}
+section > main .exchange .transaction-form .row .type {
+  border-right: var(--main-border);
+}
+section > main .exchange .transaction-form .row .type,
+section > main .exchange .transaction-form .row .price {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+section > main .exchange .transaction-form .row .price {
+  padding-left: 20px;
+}
+section > main .exchange .transaction-form .stats {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+section > main .exchange .transaction-form .stats .limit {
+  color: #777;
+}
+section > main .exchange .transaction-form .submit {
+  margin: 30px 0 80px;
+  display: block;
+  padding: 20px;
+  background: #67e66c;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+section > main .exchange .transaction-form .submit:hover {
+  background: #6df471;
+}
+section > main .exchange .transaction-form > p {
+  color: #777;
+  line-height: 1.6;
+}
+section > main .exchanges-info {
+  flex: 1;
+  padding-top: 30px;
+}
+section > main .exchanges-info .main-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+section > main .exchanges-info .main-row > div {
+  display: flex;
+  gap: 10px;
+}
+section > main .exchanges-info .main-row > div > .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+section > main .exchanges-info .main-row > div .photo:first-of-type,
+section > main .exchanges-info .main-row > div .photo:last-of-type {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section > main .exchanges-info .main-row > div:first-of-type .photo {
+  background-color: var(--main-Color);
+}
+section > main .exchanges-info .main-row > div:last-of-type .photo {
+  background-color: #E91E63;
+}
+section > main .exchanges-info .main-row > div > .info a {
+  color: var(--main-Color);
+  font-weight: 600;
+  text-decoration: none;
+}
+section > main .exchanges-info .main-row .seller {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+section > main .exchanges-info .row {
+  padding: 20px;
+  background: var(--transparent-Color);
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+}
+section > main .exchanges-info .row.one {
+  color: var(--main-Color);
+  font-weight: 700;
+}
+section > main .exchanges-info .row span:first-child {
+  flex: 1;
+}
+section > main .exchanges-info .row span:last-child {
+  flex: 2;
+}
+section > main .exchanges-info > .row.six span:last-child {
+  color: #f92818;
+}
